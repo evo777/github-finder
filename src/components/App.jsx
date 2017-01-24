@@ -28,6 +28,10 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    this.getUserData();
+  }
+
   render() {
     return (
       <div>Hi</div>
