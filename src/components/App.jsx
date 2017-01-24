@@ -28,6 +28,24 @@ class App extends Component {
     });
   }
 
+   //Get user repos
+  getUserRepos() {
+    $.ajax({
+      //Interacting with the Github API
+      url: 'https://api.github.com/users/' + this.state.username + "/repos?per_page=" + this.state.perPage + "&client_id=" + this.props.clientId + "&client_secret=" + this.props.clientSecret + "&sort=created",
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        //The data in this case is the object in the console. It has email, bio, name, events etc.
+        this.setState({userRepos: data});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        this.setState({username: null});
+        alert(err);
+      }.bind(this)
+    });
+  }
+
   componentDidMount() {
     this.getUserData();
   }
