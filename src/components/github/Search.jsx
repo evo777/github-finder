@@ -2,6 +2,17 @@ import React, {Component} from 'react';
 
 class Search extends Component {
 
+  onSubmit(e) {
+    e.preventDefault();
+    let username = this.refs.username.value.trim();
+    if (!username) {
+      alert('Please enter a useranme');
+      return;
+    }
+    this.props.onFormSubmit(username);
+    this.refs.username.value = "";
+  }
+
   render() {
     return (
       <div>
