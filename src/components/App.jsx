@@ -46,6 +46,13 @@ class App extends Component {
     });
   }
 
+  handleFormSubmit(username) {
+    this.setState({username: username}, function() {
+      this.getUserData();
+      this.getUserRepos();
+    });
+  }
+
   componentDidMount() {
     this.getUserData();
     this.getUserRepos();
