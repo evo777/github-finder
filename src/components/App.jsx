@@ -48,6 +48,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getUserData();
+    this.getUserRepos();
   }
 
   render() {
