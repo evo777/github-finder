@@ -53,7 +53,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>Hi</div>
+      <div>
+        <Search onFormSubmit={this.handleFormSubmit.bind(this)}/>
+        <Profile {...this.state} />
+      </div>
     )
   }
 }
