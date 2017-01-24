@@ -24,6 +24,16 @@ class Profile extends Component {
                   <span className="label label-danger">{this.props.userData.following} Following</span>
                 </div>
               </div>
+              <hr />
+              <div className="row">
+                <div className="col-md-12">
+                  <ul className="list-group">
+                    <li className="list-group-item"><strong>Username: </strong>{this.props.userData.login}</li>
+                    <li className="list-group-item"><strong>Location: </strong>{this.props.userData.location}</li>
+                    <li className="list-group-item"><strong>Email Address: </strong>{this.props.userData.email}</li>
+                  </ul>
+                </div>
+              </div>
       </div>
     )
   }
