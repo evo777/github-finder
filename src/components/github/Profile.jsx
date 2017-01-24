@@ -15,6 +15,15 @@ class Profile extends Component {
             <div className="col-md-4">
               <img src={this.props.userData.avatar_url} className="thumbnail" style={{width:"100%"}} />
             </div>
+            <div className="col-md-8">
+              <div className="row">
+                <div className="col-md-12">
+                  <span className="label label-primary">{this.props.userData.public_repos} Repos</span>
+                  <span className="label label-success">{this.props.userData.public_gists} Gists</span>
+                  <span className="label label-info">{this.props.userData.followers} Followers</span>
+                  <span className="label label-danger">{this.props.userData.following} Following</span>
+                </div>
+              </div>
       </div>
     )
   }
