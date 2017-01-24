@@ -10,6 +10,11 @@ class Profile extends Component {
         <div className="panel-heading">
           <h3 className="panel-title">{this.props.userData.name}</h3>
         </div>
+        <div className="panel-body">
+          <div className="row">
+            <div className="col-md-4">
+              <img src={this.props.userData.avatar_url} className="thumbnail" style={{width:"100%"}} />
+            </div>
       </div>
     )
   }
