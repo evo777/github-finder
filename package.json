@@ -1,0 +1,28 @@
+{
+  "name": "github-finder",
+  "version": "1.0.0",
+  "description": "An app that finds and displays user's github information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evo777/github-finder.git"
+  },
+  "author": "Emmanuel Vo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evo777/github-finder/issues"
+  },
+  "homepage": "https://github.com/evo777/github-finder#readme",
+  "devDependencies": {
+    "babel-core": "5.8.*",
+    "babel-loader": "5.3.*",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
