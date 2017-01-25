@@ -13,18 +13,20 @@ class App extends Component {
   }
 
   getUserData() {
-    url: 'https://api.github.com/users/' + this.state.username + "?client_id=" + this.props.clientId + "&client_secret=" + this.props.clientSecret,
-    dataType: 'json',
-    cache: false,
-    success: function(data) {
-      //The data in this case is the object in the console. It has email, bio, name, events etc.
-      this.setState({userData: data});
-      console.log(data);
-    }.bind(this),
-    error: function(xhr, status, err) {
-      this.setState({username: null});
-      alert(err);
-    }.bind(this)
+    $.ajax({
+      //Interacting with the Github API
+      url: 'https://api.github.com/users/' + this.state.username + "?client_id=" + this.props.clientId + "&client_secret=" + this.props.clientSecret,
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        //The data in this case is the object in the console. It has email, bio, name, events etc.
+        this.setState({userData: data});
+        console.log(data);
+      }.bind(this),
+      error: function(xhr, status, err) {
+        this.setState({username: null});
+        alert(err);
+      }.bind(this)
     });
   }
 
