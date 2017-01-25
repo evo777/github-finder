@@ -35,6 +35,7 @@ class Profile extends Component {
                 </div>
               </div>
               <br />
+            {/*The target="_blank" attribute is to open the profile in another browser*/}
               <a className="btn btn-primary" target="_blank" href={this.props.userData.html_url}>Visit Profile</a>
             </div>
           </div>
