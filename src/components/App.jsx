@@ -66,6 +66,7 @@ class App extends Component {
     return (
       <div>
         <Search onFormSubmit={this.handleFormSubmit.bind(this)}/>
+      {/* You are passing all the state into the Profile component*/}
         <Profile {...this.state} />
       </div>
     )
