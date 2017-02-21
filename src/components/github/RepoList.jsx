@@ -8,7 +8,7 @@ class RepoList extends Component {
       <div>
         <ul className="list-group">
           {
-            this.props.userRepos.map(repo => {
+            this.props.userRepos.map(repo => { //this.props.userRepos came from Profile.jsx.
               return <Repo repo={repo} key={repo.id} {...this.props} />
             })
           }
